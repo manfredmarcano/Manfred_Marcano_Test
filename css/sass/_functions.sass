@@ -1,0 +1,48 @@
+=bg-size($bg)
+	-webkit-background-size: $bg
+	-moz-background-size: $bg
+	-o-background-size: $bg
+	background-size: $bg
+
+=border-radius($bg)
+	-webkit-border-radius: $bg
+	-moz-border-radius: $bg
+	border-radius: $bg
+
+=transition($type, $seconds, $animation)
+	-webkit-transition: $type $seconds $animation
+	-moz-transition: $type $seconds $animation
+	-o-transition: $type $seconds $animation
+	-ms-transition: $type $seconds $animation
+	transition: $type $seconds $animation
+
+=box-shadow($var1, $var2, $var3, $var4, $r, $g, $b, $a)
+	-webkit-box-shadow: $var1 $var2 $var3 $var4 rgba($r, $g, $b, $a)
+	-moz-box-shadow: $var1 $var2 $var3 $var4 rgba($r, $g, $b, $a)
+	box-shadow: $var1 $var2 $var3 $var4 rgba($r, $g, $b, $a)
+
+=no-box-shadow()
+	-webkit-box-shadow: none
+	-moz-box-shadow: none
+	box-shadow: none
+
+=transformTranslateY($var)
+	-webkit-transform: translateY($var)
+	-ms-transform: translateY($var)
+	-moz-transform: translateY($var)
+	-o-transform: translateY($var)
+	transform: translateY($var)
+
+=transformTranslateX($var)
+	-webkit-transform: translateX($var)
+	-ms-transform: translateX($var)
+	-moz-transform: translateX($var)
+	-o-transform: translateX($var)
+	transform: translateX($var)
+
+=transformTranslate($var, $var)
+	-webkit-transform: translate($var, $var)
+	-ms-transform: translate($var, $var)
+	-moz-transform: translate($var, $var)
+	-o-transform: translate($var, $var)
+	transform: translate($var, $var)

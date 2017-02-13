@@ -1,0 +1,303 @@
+.dashboard
+    padding-top: 5%
+    @media screen and (max-width: $break-small)
+        padding: 0
+    .card.header
+        height: 250px
+        .card-block
+            height: inherit
+            position: relative
+            > .row
+                margin-left: 0
+                margin-right: 0
+                height: 100%
+                div
+                    &:first-child
+                        padding-left: 0
+                        padding-right: 0
+                    &:last-child
+                        padding-right: 0
+            .left
+                width: 110px
+                @extend .full-height
+                float: left
+                position: relative
+                .square-image
+                    position: absolute
+                    z-index: 100
+                    bottom: 0
+                    cursor: pointer
+                    @media screen and (max-width: $break-small)
+                        width: 30%
+                        //left: 0
+                        //right: 0
+                        //margin: 0 auto MANFRED
+                        left: 50%
+                        +transformTranslateX(-50%)
+                @media screen and (max-width: $break-small)
+                    width: 100%
+                    height: 140px
+                    min-height: auto
+            .right
+                position: relative
+                width: calc(100% - 110px)
+                height: 100%
+                float: left
+                .details-reviews
+                    height: 50%
+                    position: absolute
+                    width: 100%
+                    bottom: 0
+                    padding-right: 0
+                    .row
+                        height: 100%
+                    .details
+                        padding-left: 0
+                        margin-bottom: 0
+                        list-style: none
+                        position: absolute
+                        bottom: 10px
+                        li
+                            margin-bottom: 3px
+                            &:last-child
+                                margin-bottom: 0
+                                @media screen and (max-width: $break-small)
+                                    margin-bottom: 5px
+                        .name
+                            font-size: 1.1rem
+                            font-weight: 600
+                            @media screen and (max-width: $break-small)
+                                text-align: center
+                        .address
+                            font-size: 0.8rem
+                            i
+                                font-size: 1rem
+                                margin-right: 4px
+                        .phone
+                            font-size: 0.8rem
+                            i
+                                font-size: 1rem
+                                margin-right: 4px
+                        @media screen and (max-width: $break-small)
+                            position: relative
+                            bottom: unset
+                            margin-top: 0.7rem
+                    span.reviews
+                        line-height: 16px
+                        vertical-align: 4px
+                        margin-left: 16px
+                        color: $gray-strong
+                        @media screen and (max-width: $break-small)
+                            margin-left: 0
+                    @media screen and (max-width: $break-small)
+                        position: relative
+                        padding-left: 0
+                @media screen and (max-width: $break-small)
+                    height: unset !important
+                    width: 100%
+            .cover-logout
+                width: calc(100% - 2.5rem)
+                height: 50%
+                position: absolute
+                .btn.cover
+                    text-transform: none
+                    font-weight: unset
+                    font-size: $size-body
+                    letter-spacing: 0.03em
+                    color: $gray-strong
+                    padding: 0.7rem 0.75rem 0.7em 2.5rem
+                    //margin: 0 auto MANFRED
+                    position: absolute
+                    left: 50%
+                    //right: 0
+                    bottom: 0
+                    +transformTranslateX(-50%)
+                    i
+                        position: absolute
+                        left: 13px
+                        font-size: 20px
+                        top: 50%
+                        +transformTranslateY(-50%)
+                    @media (min-width: $break-medium-origin) and (max-width: $break-medium)
+                        +transformTranslate(-50%, -50%)
+                        bottom: unset
+                        top: 50%
+                .btn.logout
+                    padding: 0.4rem 1rem
+                    .focus
+                        +no-box-shadow()
+                    &:focus
+                        +no-box-shadow()
+                    &:hover
+                        @media screen and (max-width: $break-small)
+                            background-color: transparent
+                            color: $gray-strong
+                    @media screen and (max-width: $break-small)
+                        padding: 0
+                        border: 0
+                @media screen and (max-width: $break-small)
+                    height: unset
+        .navbar
+            position: absolute
+            bottom: 0
+            z-index: 90
+            width: 100%
+            border-top: solid 2px #f6f6f6
+            padding-top: 0
+            padding-right: 1.25rem
+            padding-bottom: 0
+            padding-left: calc(110px + 1.25rem + 1rem)
+            .active
+                border-bottom: solid 2px $primary-color
+            span.navbar-text
+                padding-top: 1rem
+                padding-bottom: 1rem
+                position: relative
+                .icon
+                    position: absolute
+                    top: 50%
+                    left: -30px
+                    font-size: 1.5em
+                    cursor: pointer
+                    +transformTranslateY(-50%)
+                @media screen and (max-width: $break-small)
+                    position: absolute
+                    top: -55px
+                    left: 50px
+                @media screen and (max-width: $break-medium)
+                    float: right
+            .nav-item
+                @media screen and (max-width: $break-medium)
+                    display: inline-block
+                a
+                    padding: 1rem 0
+                    margin-right: 1.5rem
+                    color: $black
+                    @media screen and (max-width: $break-small)
+                        margin-right: 0.6rem
+            .navbar-nav
+                @media screen and (max-width: $break-medium)
+                    margin-right: 0 !important
+                    display: inline-block
+            .navbar-collapse
+                @media screen and (max-width: $break-small)
+                    max-height: 55px
+            @media screen and (max-width: $break-small)
+                position: relative
+                padding-left: 1.25rem
+                margin-top: 25px
+                background-color: #FFF
+                +box-shadow(0px, 0px, 0px, -1px, 0, 0, 0, 0.4)
+        @media screen and (max-width: $break-small)
+            height: auto
+            background-color: transparent
+            +no-box-shadow()
+            +border-radius(0)
+    .card.body
+        min-height: 500px
+        margin-top: 2rem
+        margin-bottom: 2rem
+        .card-block
+            padding-top: 2rem
+            padding-bottom: 2rem
+            @media screen and (max-width: $break-small)
+                padding-top: 1rem
+                padding-bottom: 1rem
+        div.container-fluid
+        .card-title
+            color: $gray-strong
+            letter-spacing: 0.001em
+            margin-bottom: 2rem
+            @media screen and (max-width: $break-small)
+                margin-bottom: 1rem
+        .editableInputs
+            list-style: none
+            display: block
+            padding-left: 0
+            margin-bottom: 0
+            li
+                display: block
+                position: relative
+                margin-bottom: 2px
+                padding-top: 0.7rem
+                padding-bottom: 0.7rem
+                .inputText
+                    padding: 0.7rem 0
+                    padding-left: 2rem
+                    padding-right: 1rem
+                    background-color: #f4f8f9
+                    @media screen and (max-width: $break-small)
+                        padding-top: 0
+                        padding-bottom: 0
+                        padding-left: 1.5rem
+                        background-color: transparent
+                .inputIcon
+                    background: #ecf1f5
+                    color: $gray-strong
+                    padding: 0.7rem 1rem
+                    cursor: pointer
+                    &:hover
+                        background-color: $primary-color
+                        color: #FFF
+                    @media screen and (max-width: $break-small)
+                        display: none
+                &:first-child
+                    padding-top: 0.6rem
+                    padding-bottom: 0.6rem
+                    .inputText
+                        padding: 0.6rem
+                        font-size: 1rem
+                        font-weight: 600
+                        @media screen and (max-width: $break-small)
+                            padding-top: 0
+                            padding-bottom: 0
+                            padding-left: 0
+                    .inputIcon
+                        padding-top: 0.72rem
+                        padding-bottom: 0.65rem
+                    @media screen and (max-width: $break-small)
+                        padding-top: 0.2rem
+                        padding-bottom: 0.2rem
+                &:before
+                    width: 17px
+                    height: 17px
+                    position: absolute
+                    top: 15px
+                    left: 9px
+                    font-family: "Ionicons"
+                    font-size: 19px
+                    color: $gray-strong
+                    line-height: 16px
+                    @media screen and (max-width: $break-small)
+                        top: 6px
+                &:nth-child(2)
+                    &:before
+                        content: "\f276"
+                        @media screen and (max-width: $break-small)
+                            left: 2px
+                &:nth-child(3)
+                    &:before
+                        content: "\f4b8"
+                        padding-left: 0.2rem
+                        @media screen and (max-width: $break-small)
+                            left: 1px
+                &:nth-child(4)
+                    &:before
+                        content: "\f447"
+                        padding-left: 0.1rem
+                        @media screen and (max-width: $break-small)
+                            left: 1px
+                @media screen and (max-width: $break-small)
+                    padding-top: 0.2rem
+                    padding-bottom: 0.2rem
+        @media screen and (max-width: $break-small)
+            border-radius: 0
+            margin-top: 1rem
+            margin-bottom: 1rem
+            min-height: unset
+        .settingsContainer
+            width: 300px
+            .btn
+                margin-top: 1rem
+            @media screen and (max-width: $break-small)
+                width: unset
